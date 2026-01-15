@@ -16,6 +16,9 @@ jobs:
     steps:
 
       - uses: actions/checkout@v4
+      - uses: actions/setup-node@v6
+        with:
+          node-version: "24"      
 
       - name: Create yaml file
         run: |
@@ -91,6 +94,9 @@ jobs:
     steps:
 
       - uses: actions/checkout@v4
+      - uses: actions/setup-node@v6
+        with:
+          node-version: "24"      
 
       - run: echo -e "$TEMP_KUBECONFIG" > /tmp/kubeconfig
         shell: bash
@@ -157,6 +163,9 @@ jobs:
     steps:
 
       - uses: actions/checkout@v4
+      - uses: actions/setup-node@v6
+        with:
+          node-version: "24"      
 
       - name: Create yaml file
         run: |

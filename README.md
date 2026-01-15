@@ -90,7 +90,10 @@ jobs:
     
     steps:
       - uses: actions/checkout@v4
-        
+      - uses: actions/setup-node@v6
+        with:
+          node-version: "24"
+
       - name: Create starship devnet for osmos and wasm
         uses: hyperweb-io/starship-action@1.0.0
         with:
